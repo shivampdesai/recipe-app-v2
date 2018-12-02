@@ -1,5 +1,6 @@
+//Author: Shivam Desai 
+
 import React, { Component } from 'react';
-import './App.css';
 
 class App extends Component {
 
@@ -10,7 +11,7 @@ class App extends Component {
       recipes: [],
       ingredients: []
     };
-  }
+  }//constructor()
 
   getRecipes(){
     var newIngredient = document.getElementById('ingredient').value
@@ -25,7 +26,6 @@ class App extends Component {
       url+=(this.state.ingredients[i] + ',');
       console.log(this.state.ingredients[i]);
     }
-
 
     url+=newIngredient;
 
@@ -43,9 +43,7 @@ class App extends Component {
 
        console.log(data);
      })
-
-
-  }
+  } //getRecipes()
 
   render() {
 
@@ -73,10 +71,9 @@ class App extends Component {
           {current_recipes.map(res => <div> <h2><a href={res.source_url}> {res.title} </a> </h2> <img src={res.image_url}/> </div>)}
         </div>
 
-
       </div>
     );
-  }
+  }//render()
 }
 
 export default App;
