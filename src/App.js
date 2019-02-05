@@ -20,7 +20,7 @@ class App extends Component {
       ingredients: this.state.ingredients.concat(newIngredient)
     });
 
-    var url = 'https://www.food2fork.com/api/search?key=8f865842f2ee8b36c73f0b40eef4fd56&q=';
+    var url = 'https://www.food2fork.com/api/search?key='YOUR-API-KEY-HERE'=';
 
     for (var i = 0; i < this.state.ingredients.length; i++){
       url+=(this.state.ingredients[i] + ',');
